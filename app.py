@@ -59,7 +59,7 @@ with c2:
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("fitbit_data/daily_merged_final.csv")
+    df = pd.read_csv("daily_merged_final.csv")
     df["Date"] = pd.to_datetime(df["Date"])
     df["Weekday"] = df["Date"].dt.day_name()
     df["TotalActiveMinutes"] = df["VeryActiveMinutes"] + df["FairlyActiveMinutes"] + df["LightlyActiveMinutes"]
